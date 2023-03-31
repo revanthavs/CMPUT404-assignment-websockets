@@ -73,7 +73,8 @@ function prepEntity(entity) {
 function clearFrame() {
     with(context) {
 	moveTo(0,0);
-	fillStyle = "#000";
+	// fillStyle = "#000";
+    fillStyle = "gray";
 	fillRect(0,0,W,H);
     }
 
@@ -237,15 +238,15 @@ mouse = (function() {
 // Add the application specific mouse listeners!
 //XXX: TODO Make these prettier!
 mouse.mousedowners.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'gray', 'radius':10});
+    addEntityWithoutName({'x':x,'y':y,'colour':'black', 'radius':10});
 });
 
 mouse.mouseuppers.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'gray', 'radius':10});
+    addEntityWithoutName({'x':x,'y':y,'colour':'black', 'radius':10});
 });
 
 mouse.mousedraggers.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'brown',
+    addEntityWithoutName({'x':x,'y':y,'colour':'black',
                           'radius':10});
 });
 
